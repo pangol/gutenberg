@@ -61,4 +61,3 @@ if ( ! function_exists( 'render_block_core_shortcode' ) ) {
 if ( ! function_exists( 'render_block_core_search' ) ) {
 	require dirname( __FILE__ ) . '/../packages/block-library/src/search/index.php';
 }
-}
