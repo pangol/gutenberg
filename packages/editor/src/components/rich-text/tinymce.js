@@ -198,6 +198,7 @@ export default class TinyMCE extends Component {
 			// Prevent it otherwise from accumulating any history.
 			custom_undo_redo_levels: 1,
 			lists_indent_on_tab: false,
+			object_resizing: false,
 		};
 
 		tinymce.init( {
