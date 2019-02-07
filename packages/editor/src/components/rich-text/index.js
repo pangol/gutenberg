@@ -170,7 +170,7 @@ export class RichText extends Component {
 		} );
 	}
 
-	applyRecord( record, { withoutSelectionApplication } = {} ) {
+	applyRecord( record ) {
 		apply( {
 			value: record,
 			current: this.editableRef,
@@ -182,7 +182,6 @@ export class RichText extends Component {
 				return element;
 			},
 			prepareEditableTree: this.props.prepareEditableTree,
-			withoutSelectionApplication,
 		} );
 	}
 
@@ -413,10 +412,8 @@ export class RichText extends Component {
 	 * @param {boolean} $2.withoutHistory If true, no undo level will be
 	 *                                    created.
 	 */
-	onChange( record, { withoutHistory, noFocusReturn } = {} ) {
-		this.applyRecord( record, {
-			withoutSelectionApplication: noFocusReturn,
-		} );
+	onChange( record, { withoutHistory } = {} ) {
+		this.applyRecord( record );
 
 		const { start, end } = record;
 

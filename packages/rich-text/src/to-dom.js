@@ -207,7 +207,6 @@ export function apply( {
 	multilineWrapperTags,
 	createLinePadding,
 	prepareEditableTree,
-	withoutSelectionApplication,
 } ) {
 	// Construct a new element tree in memory.
 	const { body, selection } = toDom( {
@@ -220,7 +219,7 @@ export function apply( {
 
 	applyValue( body, current );
 
-	if ( value.start !== undefined && ! withoutSelectionApplication ) {
+	if ( value.start !== undefined ) {
 		applySelection( selection, current );
 	}
 }
