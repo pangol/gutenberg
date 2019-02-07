@@ -168,7 +168,6 @@ return array(
 	'wp-escape-html'                        => array(),
 	'wp-format-library'                     => array(
 		'wp-components',
-		'wp-dom',
 		'wp-editor',
 		'wp-element',
 		'wp-i18n',
@@ -216,6 +215,8 @@ return array(
 	'wp-rich-text'                          => array(
 		'lodash',
 		'wp-data',
+		'wp-dom',
+		'wp-element',
 		'wp-escape-html',
 	),
 	'wp-shortcode'                          => array(
