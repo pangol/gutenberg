@@ -88,7 +88,7 @@ export const registerCoreBlocks = () => {
 		preformatted,
 		pullquote,
 		rss,
-		search,
+		process.env.GUTENBERG_PHASE === 2 ? search : undefined,
 		separator,
 		reusableBlock,
 		spacer,
